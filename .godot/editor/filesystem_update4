@@ -1,0 +1,10 @@
+res://scripts/GameManager.gd
+res://scripts/Fireball.gd
+res://scripts/UI.gd
+res://scripts/Game.gd
+res://scenes/Fireball.tscn
+res://scenes/Fighter.tscn
+res://scenes/Game.tscn
+res://scripts/Fighter.gd
+res://scripts/MainMenu.gd
+res://README.md
