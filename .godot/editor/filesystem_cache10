@@ -1,4 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
+<<<<<<< HEAD
 ::res://::1761541494
 icon.svg::CompressedTexture2D::8072991063756383541::1761363116::1761363127::1::::<><><>0<>0<>87e52b1d21e2961cd962aebf234a6b12<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1761371457::0::1::::<><><>0<>0<><>::
@@ -15,3 +16,8 @@ Game.gd::GDScript::5779288300677551802::1761371018::0::1::::<>Node2D<><>0<>0<><>
 GameManager.gd::GDScript::6486441129717249176::1761371512::0::1::::<>Node<><>0<>0<><>::
 MainMenu.gd::GDScript::3038503226279308556::1761371018::0::1::::<>Control<><>0<>0<><>::
 UI.gd::GDScript::3176512772352128054::1761371018::0::1::::<>CanvasLayer<><>0<>0<><>::
+=======
+::res://::1761539035
+icon.svg::CompressedTexture2D::8072991063756383541::1760636592::1761023782::1::::<><><>0<>0<>87e52b1d21e2961cd962aebf234a6b12<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1760636773::0::1::::<><><>0<>0<><>::
+>>>>>>> 073f2b938705592e4ab753065deab79e4c114dc0

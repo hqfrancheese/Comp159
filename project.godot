@@ -14,6 +14,7 @@ config/name="Comp 159"
 run/main_scene="uid://he57r8puxfiv"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://he57r8puxfiv"
 
 [autoload]
 
