@@ -1,12 +1,17 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761671000
+::res://::1761671697
 icon.svg::CompressedTexture2D::8072991063756383541::1760636592::1761023782::1::::<><><>0<>0<>87e52b1d21e2961cd962aebf234a6b12<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1761595856::0::1::::<><><>0<>0<><>::
-::res://scenes/::1761670993
+::res://assets/::1761671744
+::res://assets/sprite/::1761672021
+Fire_Mage_Spritelist copy.png::CompressedTexture2D::1689808621399536146::1761671868::1761672032::1::::<><><>0<>0<>c101b2a95168e3265b12efb931d98e82<>res://.godot/imported/Fire_Mage_Spritelist copy.png-54be37d90fc77e272cc89134abc36bf5.ctex::
+Light_Mage_Spritelist copy.png::CompressedTexture2D::8203897113298865853::1761671981::1761672032::1::::<><><>0<>0<>5b844f93b9b841b2b4d1c2b1530dc80e<>res://.godot/imported/Light_Mage_Spritelist copy.png-336e55bfb46a30ce73a8e034cfc95ac4.ctex::
+Wanderer_Magican_Spritelist copy.png::CompressedTexture2D::4828819020835346028::1761671990::1761672032::1::::<><><>0<>0<>d3eadbf2dbd379f3b3b8b53d3d5484a1<>res://.godot/imported/Wanderer_Magican_Spritelist copy.png-d67d0e7b281a327b66bd94081a6fe5c8.ctex::
+::res://scenes/::1761671227
 ControlsMenu.tscn::PackedScene::2968680887357990990::1761670993::0::1::::<><><>0<>0<><>::uid://drix6v6boxhmj::::res://scripts/ControlsMenu.gd
 Fighter.tscn::PackedScene::4793882184481955082::1761595856::0::1::::<><><>0<>0<><>::uid://c1nc8e4dis5cg::::res://scripts/Fighter.gd
 Fireball.tscn::PackedScene::723900552457926717::1761595856::0::1::::<><><>0<>0<><>::uid://blbbye81wsijd::::res://scripts/Fireball.gd
-Game.tscn::PackedScene::387273879263746175::1761670993::0::1::::<><><>0<>0<><>::uid://colsbfijmkddy::::res://scripts/Game.gd<>uid://cakgslkcjmcvi::::res://scenes/Fighter.tscn<>uid://cdvynxm887iba::::res://scenes/UI.tscn
+Game.tscn::PackedScene::387273879263746175::1761671227::0::1::::<><><>0<>0<><>::uid://colsbfijmkddy::::res://scripts/Game.gd<>uid://cakgslkcjmcvi::::res://scenes/Fighter.tscn<>uid://cdvynxm887iba::::res://scenes/UI.tscn
 MainMenu.tscn::PackedScene::501459016255082705::1761670993::0::1::::<><><>0<>0<><>::uid://bjj4x7cd0uuue::::res://scripts/MainMenu.gd
 UI.tscn::PackedScene::5028241482402154738::1761595856::0::1::::<><><>0<>0<><>::uid://bliyx3wtom1fe::::res://scripts/UI.gd
 ::res://scripts/::1761670993
