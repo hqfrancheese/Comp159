@@ -34,6 +34,8 @@ shape = SubResource("RectangleShape2D_aug50")
 editor_description = "1"
 position = Vector2(200, 400)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player1"]
+
 [node name="Player2" parent="." instance=ExtResource("2_78awf")]
 editor_description = "2"
 position = Vector2(800, 400)
