@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do5a8s2hn00xt"
-path="res://.godot/imported/Light_Mage_Spritelist copy.png-336e55bfb46a30ce73a8e034cfc95ac4.ctex"
+uid="uid://cmb4expq7uuwm"
+path="res://.godot/imported/Magic_sphere.png-c9c5f15248019bac479e4b2c0e3570e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/Light_Mage_Spritelist copy.png"
-dest_files=["res://.godot/imported/Light_Mage_Spritelist copy.png-336e55bfb46a30ce73a8e034cfc95ac4.ctex"]
+source_file="res://assets/sprites/Wanderer Magican/Magic_sphere.png"
+dest_files=["res://.godot/imported/Magic_sphere.png-c9c5f15248019bac479e4b2c0e3570e7.ctex"]
 
 [params]
 

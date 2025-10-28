@@ -5,7 +5,6 @@ extends Node2D
 @onready var player2 = $Player2
 
 func _ready():
-	GameManager.reset_health()
 	
 	# Set up Player 2 as CPU if needed
 	if GameManager.game_mode == GameManager.GameMode.PVCPU:

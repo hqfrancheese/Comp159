@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca2d7dac865mu"
-path="res://.godot/imported/Wanderer_Magican_Spritelist copy.png-d67d0e7b281a327b66bd94081a6fe5c8.ctex"
+uid="uid://d1abiovw7hl57"
+path="res://.godot/imported/Attack_1.png-bbe34feb7b1f22a4e47ae9ee52ca0776.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/Wanderer_Magican_Spritelist copy.png"
-dest_files=["res://.godot/imported/Wanderer_Magican_Spritelist copy.png-d67d0e7b281a327b66bd94081a6fe5c8.ctex"]
+source_file="res://assets/sprites/Fire Wizard/Attack_1.png"
+dest_files=["res://.godot/imported/Attack_1.png-bbe34feb7b1f22a4e47ae9ee52ca0776.ctex"]
 
 [params]
 

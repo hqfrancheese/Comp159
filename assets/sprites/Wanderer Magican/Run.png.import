@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ycs5vxifrhgs"
-path="res://.godot/imported/Fire_Mage_Spritelist copy.png-54be37d90fc77e272cc89134abc36bf5.ctex"
+uid="uid://jwfsgvaoxvoc"
+path="res://.godot/imported/Run.png-e60fa1c27e3f6b73ea898adf580f8094.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite/Fire_Mage_Spritelist copy.png"
-dest_files=["res://.godot/imported/Fire_Mage_Spritelist copy.png-54be37d90fc77e272cc89134abc36bf5.ctex"]
+source_file="res://assets/sprites/Wanderer Magican/Run.png"
+dest_files=["res://.godot/imported/Run.png-e60fa1c27e3f6b73ea898adf580f8094.ctex"]
 
 [params]
 
