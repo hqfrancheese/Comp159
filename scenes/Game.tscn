@@ -37,7 +37,10 @@ editor_description = "1"
 position = Vector2(200, 400)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player1"]
+<<<<<<< Updated upstream
 sprite_frames = SubResource("SpriteFrames_cpr0p")
+=======
+>>>>>>> Stashed changes
 
 [node name="Player2" parent="." instance=ExtResource("2_78awf")]
 editor_description = "2"
