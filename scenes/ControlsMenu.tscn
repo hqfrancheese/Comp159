@@ -1,0 +1,135 @@
+[gd_scene load_steps=2 format=3 uid="uid://bikb0gaa4udco"]
+
+[ext_resource type="Script" uid="uid://drix6v6boxhmj" path="res://scripts/ControlsMenu.gd" id="1_nwgxb"]
+
+[node name="ControlsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nwgxb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="Player1Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Player1Grid" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "Left:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "A"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "Right:"
+
+[node name="Label4" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "D"
+
+[node name="Label5" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "Jump:"
+
+[node name="Label6" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "W"
+
+[node name="Label7" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "Melee:"
+
+[node name="Label8" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "F"
+
+[node name="Label9" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "Fireball:"
+
+[node name="Label10" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "G"
+
+[node name="Label11" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "Block:"
+
+[node name="Label12" type="Label" parent="VBoxContainer/Player1Grid"]
+layout_mode = 2
+text = "H"
+
+[node name="Player2Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Player2Grid" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "Left:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "←"
+
+[node name="Label3" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "Right:"
+
+[node name="Label4" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "→"
+
+[node name="Label5" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "Jump:"
+
+[node name="Label6" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "↑"
+
+[node name="Label7" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "Melee:"
+
+[node name="Label8" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "L"
+
+[node name="Label9" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "Fireball:"
+
+[node name="Label10" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "K"
+
+[node name="Label11" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "Block:"
+
+[node name="Label12" type="Label" parent="VBoxContainer/Player2Grid"]
+layout_mode = 2
+text = "J"
+
+[node name="SaveButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"

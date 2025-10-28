@@ -33,25 +33,12 @@ var controls = {
 
 func _ready():
 	if player_number == 1:
-		controls = {
-			"left": "a",
-			"right": "d",
-			"jump": "w",
-			"melee": "f",
-			"fireball": "g",
-			"block": "h"
-		}
+		controls = GameManager.player1_controls
 		sprite.color = Color.BLUE
 	else:
-		controls = {
-			"left": "left",
-			"right": "right",
-			"jump": "up",
-			"melee": "l",
-			"fireball": "k",
-			"block": "j"
-		}
+		controls = GameManager.player2_controls
 		sprite.color = Color.RED
+
 
 func _physics_process(delta):
 	fireball_timer = max(0, fireball_timer - delta)

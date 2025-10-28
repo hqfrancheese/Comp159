@@ -40,6 +40,10 @@ text = "Player vs Player"
 layout_mode = 2
 text = "Player vs CPU"
 
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"

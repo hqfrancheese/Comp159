@@ -1,5 +1,7 @@
 Button
+Control
 Label
+GridContainer
 VBoxContainer
 CollisionShape2D
 ColorRect
@@ -10,4 +12,3 @@ HBoxContainer
 MarginContainer
 CanvasLayer
 CharacterBody2D
-Area2D
