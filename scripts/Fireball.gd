@@ -7,13 +7,18 @@ const DAMAGE = 20.0
 var direction: int = 1
 var shooter: Node = null
 
+@onready var anim = $AnimatedSprite2D
+
 func _ready():
 	body_entered.connect(_on_body_entered)
 	
 	# Set visual
 	var sprite = $ColorRect
 	sprite.color = Color.ORANGE
-
+	
+func _setup_animation():
+	anim.flip_h = direction < 0
+	
 func _physics_process(delta):
 	position.x += direction * SPEED * delta
 	

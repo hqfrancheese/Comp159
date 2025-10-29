@@ -1,11 +1,11 @@
 AnimatedSprite2D
+ColorRect
 Button
 Control
 Label
 GridContainer
 VBoxContainer
 CollisionShape2D
-ColorRect
 StaticBody2D
 Node2D
 ProgressBar

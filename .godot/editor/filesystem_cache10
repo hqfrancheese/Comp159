@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761674519
+::res://::1761712600
 icon.svg::CompressedTexture2D::8072991063756383541::1760636592::1761023782::1::::<><><>0<>0<>87e52b1d21e2961cd962aebf234a6b12<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1761595856::0::1::::<><><>0<>0<><>::
 ::res://assets/::1761673991
@@ -41,18 +41,18 @@ Magic_arrow.png::CompressedTexture2D::115561923236993489::1761672081::1761672081
 Magic_sphere.png::CompressedTexture2D::5618941036742156584::1761672081::1761672081::1::::<><><>0<>0<>6e2f642e9cd866b82f3d6f5bb799998c<>res://.godot/imported/Magic_sphere.png-c9c5f15248019bac479e4b2c0e3570e7.ctex::
 Run.png::CompressedTexture2D::677451980186358026::1761672081::1761672081::1::::<><><>0<>0<>65c5e9e7ded4331ae73ebb5a9265964a<>res://.godot/imported/Run.png-e60fa1c27e3f6b73ea898adf580f8094.ctex::
 Walk.png::CompressedTexture2D::443061654949696523::1761672081::1761672081::1::::<><><>0<>0<>291b9064c1c6efadbb475cb16847bd38<>res://.godot/imported/Walk.png-761709e33081ac0ea27365b17437fbbc.ctex::
-::res://scenes/::1761673494
+::res://scenes/::1761676190
 ControlsMenu.tscn::PackedScene::2968680887357990990::1761673400::0::1::::<><><>0<>0<><>::uid://drix6v6boxhmj::::res://scripts/ControlsMenu.gd
-Fighter.tscn::PackedScene::4793882184481955082::1761673494::0::1::::<><><>0<>0<><>::uid://c1nc8e4dis5cg::::res://scripts/Fighter.gd<>uid://cp12y2buvpi1m::::res://assets/sprites/Fire Wizard/Idle.png
+Fighter.tscn::PackedScene::4793882184481955082::1761676190::0::1::::<><><>0<>0<><>::uid://c1nc8e4dis5cg::::res://scripts/Fighter.gd<>uid://cp12y2buvpi1m::::res://assets/sprites/Fire Wizard/Idle.png
 Fireball.tscn::PackedScene::723900552457926717::1761595856::0::1::::<><><>0<>0<><>::uid://blbbye81wsijd::::res://scripts/Fireball.gd
-Game.tscn::PackedScene::387273879263746175::1761672081::0::1::::<><><>0<>0<><>::uid://colsbfijmkddy::::res://scripts/Game.gd<>uid://cakgslkcjmcvi::::res://scenes/Fighter.tscn<>uid://cdvynxm887iba::::res://scenes/UI.tscn
+Game.tscn::PackedScene::387273879263746175::1761676054::0::1::::<><><>0<>0<><>::uid://colsbfijmkddy::::res://scripts/Game.gd<>uid://cakgslkcjmcvi::::res://scenes/Fighter.tscn<>uid://cdvynxm887iba::::res://scenes/UI.tscn
 MainMenu.tscn::PackedScene::501459016255082705::1761670993::0::1::::<><><>0<>0<><>::uid://bjj4x7cd0uuue::::res://scripts/MainMenu.gd
 UI.tscn::PackedScene::5028241482402154738::1761595856::0::1::::<><><>0<>0<><>::uid://bliyx3wtom1fe::::res://scripts/UI.gd
-::res://scripts/::1761673737
+::res://scripts/::1761676049
 ControlsMenu.gd::GDScript::8370440416347358901::1761670993::0::1::::<>Control<><>0<>0<><>::
-Fighter.gd::GDScript::6624768833002683506::1761670993::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Fighter.gd::GDScript::6624768833002683506::1761676049::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Fireball.gd::GDScript::3160666179795384773::1761595856::0::1::::<>Area2D<><>0<>0<><>::
 Game.gd::GDScript::5779288300677551802::1761673737::0::1::::<>Node2D<><>0<>0<><>::
 GameManager.gd::GDScript::6486441129717249176::1761670993::0::1::::<>Node<><>0<>0<><>::
-MainMenu.gd::GDScript::3038503226279308556::1761670993::0::1::::<>Control<><>0<>0<><>::
+MainMenu.gd::GDScript::3038503226279308556::1761675085::0::1::::<>Control<><>0<>0<><>::
 UI.gd::GDScript::3176512772352128054::1761595856::0::1::::<>CanvasLayer<><>0<>0<><>::

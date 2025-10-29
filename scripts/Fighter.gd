@@ -17,6 +17,7 @@ var fireball_timer: float = 0.0
 var melee_timer: float = 0.0
 var is_attacking: bool = false
 var opponent: CharacterBody2D = null
+var facing: int = 1
 
 # Player controls mapping
 var controls = {
@@ -52,6 +53,14 @@ func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
+	# Face direction
+	if velocity.x != 0:
+		facing = sign(velocity.x)
+		$AnimatedSprite2D.flip_h = facing < 0
+		$AnimatedSprite2D.play("run")
+	else:
+		$AnimatedSprite2D.play("idle")
 	
 	# Update blocking visual
 	if is_blocking:
@@ -112,6 +121,8 @@ func _cpu_behavior(_delta):
 	elif distance > MELEE_RANGE and distance < 400 and fireball_timer <= 0:
 		_shoot_fireball()
 	
+	facing = sign(direction_to_opponent)
+	
 	# Random blocking
 	is_blocking = randf() < 0.1
 
@@ -129,7 +140,7 @@ func _melee_attack():
 	add_child(attack_area)
 	
 	# Position hitbox in front of player
-	var facing = 1 if sprite.rotation == 0 else -1
+	facing = self.facing
 	attack_area.position.x = MELEE_RANGE / 2 * facing
 	
 	# Check for hit
@@ -157,14 +168,10 @@ func _shoot_fireball():
 	
 	var fireball = fireball_scene.instantiate()
 	get_parent().add_child(fireball)
-	fireball.global_position = global_position
 	
-	# Shoot towards opponent
-	var direction = 1
-	if opponent:
-		direction = sign(opponent.global_position.x - global_position.x)
-	
-	fireball.direction = direction
+	var offset = Vector2(40, -70)
+	fireball.global_position = global_position + Vector2(offset.x * facing, offset.y)
+	fireball.direction = facing
 	fireball.shooter = self
 
 func take_damage(amount: float):
