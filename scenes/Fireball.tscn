@@ -90,11 +90,11 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tpv87")
 }, {
-"duration": 1.0,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_6se3a")
 }],
 "loop": false,
-"name": &"fireball",
+"name": &"charge",
 "speed": 8.0
 }]
 
@@ -115,5 +115,7 @@ shape = SubResource("CircleShape2D_6se3a")
 position = Vector2(-36, -2)
 scale = Vector2(1.8281249, 1.6875)
 sprite_frames = SubResource("SpriteFrames_1b1lh")
-animation = &"fireball"
-autoplay = "fireball"
+animation = &"charge"
+autoplay = "charge"
+frame = 11
+frame_progress = 1.0

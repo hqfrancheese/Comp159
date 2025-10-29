@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cdvynxm887iba" path="res://scenes/UI.tscn" id="3_s0nni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aug50"]
-size = Vector2(2000, 100)
+size = Vector2(2002, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cpr0p"]
 
@@ -29,7 +29,7 @@ offset_bottom = 100.0
 color = Color(0, 0.48530394, 0.19317397, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(0, 50)
+position = Vector2(996, 50)
 shape = SubResource("RectangleShape2D_aug50")
 
 [node name="Player1" parent="." instance=ExtResource("2_78awf")]

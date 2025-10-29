@@ -15,7 +15,7 @@ func _ready():
 	
 func _setup_animation():
 	anim.flip_h = direction < 0
-	anim.play("fireball")
+	anim.play("charge")
 	
 func _physics_process(delta):
 	position.x += direction * SPEED * delta
