@@ -50,7 +50,7 @@ region = Rect2(576, 0, 64, 64)
 atlas = ExtResource("2_6se3a")
 region = Rect2(640, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_px3or"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6se3a"]
 atlas = ExtResource("2_6se3a")
 region = Rect2(704, 0, 64, 64)
 
@@ -91,11 +91,11 @@ animations = [{
 "texture": SubResource("AtlasTexture_tpv87")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_px3or")
+"texture": SubResource("AtlasTexture_6se3a")
 }],
-"loop": true,
-"name": &"default",
-"speed": 5.0
+"loop": false,
+"name": &"fireball",
+"speed": 8.0
 }]
 
 [node name="Fireball" type="Area2D"]
@@ -115,5 +115,5 @@ shape = SubResource("CircleShape2D_6se3a")
 position = Vector2(-36, -2)
 scale = Vector2(1.8281249, 1.6875)
 sprite_frames = SubResource("SpriteFrames_1b1lh")
-autoplay = "default"
-frame_progress = 0.6629804
+animation = &"fireball"
+autoplay = "fireball"

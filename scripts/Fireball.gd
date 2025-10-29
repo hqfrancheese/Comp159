@@ -11,13 +11,11 @@ var shooter: Node = null
 
 func _ready():
 	body_entered.connect(_on_body_entered)
-	
-	# Set visual
-	var sprite = $ColorRect
-	sprite.color = Color.ORANGE
+	call_deferred("_setup_animation")
 	
 func _setup_animation():
 	anim.flip_h = direction < 0
+	anim.play("fireball")
 	
 func _physics_process(delta):
 	position.x += direction * SPEED * delta
