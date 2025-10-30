@@ -1,12 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://he57r8puxfiv"]
+[gd_scene load_steps=3 format=3 uid="uid://he57r8puxfiv"]
 
 [ext_resource type="Script" uid="uid://bjj4x7cd0uuue" path="res://scripts/MainMenu.gd" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://dgtyklnc46ut4" path="res://assets/background/game_background_3.1.png" id="2_0ykhv"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -352.0
+offset_bottom = -215.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqorp")
@@ -47,3 +50,12 @@ text = "Controls"
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(579, 321)
+scale = Vector2(0.6483724, 0.6288194)
+texture = ExtResource("2_0ykhv")
