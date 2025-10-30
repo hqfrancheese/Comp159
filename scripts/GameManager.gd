@@ -26,6 +26,10 @@ var player2_controls = {
 var player1_health = 100
 var player2_health = 100
 
+func reset_health():
+	player1_health = 100.0
+	player2_health = 100.0
+
 # (Optional) Save/load functions
 func save_controls():
 	var data = {

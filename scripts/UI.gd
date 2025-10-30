@@ -10,6 +10,7 @@ func _ready():
 	restart_button.pressed.connect(_on_restart_pressed)
 	restart_button.visible = false
 	result_label.visible = false
+	restart_button.process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _process(_delta):
 	# Update health bars
