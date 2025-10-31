@@ -16,7 +16,7 @@ func _ready():
 func _setup_animation():
 	anim.flip_h = direction < 0
 	anim.play("charge")
-	
+
 func _physics_process(delta):
 	position.x += direction * SPEED * delta
 	
@@ -32,3 +32,8 @@ func _on_body_entered(body):
 		body.take_damage(DAMAGE)
 	
 	queue_free()
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if anim.animation == "charge":
+		queue_free()

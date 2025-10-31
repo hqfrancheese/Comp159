@@ -90,7 +90,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tpv87")
 }, {
-"duration": 0.01,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6se3a")
 }],
 "loop": false,
@@ -119,3 +119,5 @@ animation = &"charge"
 autoplay = "charge"
 frame = 11
 frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
