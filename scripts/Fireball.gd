@@ -31,8 +31,9 @@ func _on_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(DAMAGE)
 	
-	queue_free()
-
+	if body.has_method("is_blocking") and body.is_blocking:
+		queue_free()
+		return
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if anim.animation == "charge":

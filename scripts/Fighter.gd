@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var player_number: int = 1
 @export var is_cpu: bool = false
+@onready var anim = $AnimatedSprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
@@ -12,7 +13,7 @@ const MELEE_COOLDOWN = 0.5
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health: float = 100.0
-var is_blocking: bool = false
+var is_blocking = false
 var fireball_timer: float = 0.0
 var melee_timer: float = 0.0
 var is_attacking: bool = false
@@ -55,9 +56,11 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	
 	# Face direction
-	if velocity.x != 0:
+	$AnimatedSprite2D.flip_h = facing < 0
+	if is_blocking:
+		$AnimatedSprite2D.play("block")
+	elif velocity.x != 0:
 		facing = sign(velocity.x)
-		$AnimatedSprite2D.flip_h = facing < 0
 		$AnimatedSprite2D.play("run")
 	else:
 		$AnimatedSprite2D.play("idle")
@@ -196,3 +199,10 @@ func take_damage(amount: float):
 
 func set_opponent(new_opponent: CharacterBody2D):
 	opponent = new_opponent
+
+func _input(event):
+	if event.is_action_pressed("block"):
+		is_blocking = true
+		anim.play("block")
+	elif event.is_action_released("block"):
+		is_blocking = false

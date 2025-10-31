@@ -1,11 +1,20 @@
-[gd_scene load_steps=21 format=3 uid="uid://cakgslkcjmcvi"]
+[gd_scene load_steps=24 format=3 uid="uid://cakgslkcjmcvi"]
 
 [ext_resource type="Script" uid="uid://c1nc8e4dis5cg" path="res://scripts/Fighter.gd" id="1_5kbbp"]
 [ext_resource type="Texture2D" uid="uid://cp12y2buvpi1m" path="res://assets/sprites/Fire Wizard/Idle.png" id="2_qf0i6"]
+[ext_resource type="Texture2D" uid="uid://d1abiovw7hl57" path="res://assets/sprites/Fire Wizard/Attack_1.png" id="2_stky8"]
 [ext_resource type="Texture2D" uid="uid://wl612q2xxjmk" path="res://assets/sprites/Fire Wizard/Run.png" id="3_un5nr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qf0i6"]
-size = Vector2(40, 149)
+size = Vector2(100, 149)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e5sj"]
+atlas = ExtResource("2_stky8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iohhj"]
+atlas = ExtResource("2_stky8")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_un5nr"]
 atlas = ExtResource("2_qf0i6")
@@ -71,6 +80,17 @@ region = Rect2(896, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4e5sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iohhj")
+}],
+"loop": true,
+"name": &"block",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_un5nr")
 }, {
 "duration": 1.0,
@@ -129,16 +149,17 @@ animations = [{
 script = ExtResource("1_5kbbp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -74.5)
+position = Vector2(30, -74.5)
 shape = SubResource("RectangleShape2D_qf0i6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(28.000002, -145)
 scale = Vector2(2.1601563, 2.2617188)
 sprite_frames = SubResource("SpriteFrames_ftax0")
-animation = &"run"
+animation = &"block"
 autoplay = "idle"
+frame = 1
+frame_progress = 0.029792404
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
