@@ -37,9 +37,13 @@ func _ready():
 	if player_number == 1:
 		controls = GameManager.player1_controls
 		sprite.color = Color.BLUE
+		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Fire Wizard/firewizard.tres") 
+
 	else:
 		controls = GameManager.player2_controls
 		sprite.color = Color.RED
+		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Lightning Mage/lightningmage.tres")
+
 
 
 func _physics_process(delta):
@@ -201,8 +205,8 @@ func set_opponent(new_opponent: CharacterBody2D):
 	opponent = new_opponent
 
 func _input(event):
-	if event.is_action_pressed("block"):
+	if event.is_action_pressed("h"):
 		is_blocking = true
-		anim.play("block")
-	elif event.is_action_released("block"):
+		anim.play("h")
+	elif event.is_action_released("h"):
 		is_blocking = false
