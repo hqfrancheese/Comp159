@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c1nc8e4dis5cg" path="res://scripts/Fighter.gd" id="1_5kbbp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qf0i6"]
-size = Vector2(100, 149)
+size = Vector2(54, 149)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5kbbp"]
 
@@ -11,7 +11,7 @@ size = Vector2(100, 149)
 script = ExtResource("1_5kbbp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(30, -74.5)
+position = Vector2(7, -74.5)
 shape = SubResource("RectangleShape2D_qf0i6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

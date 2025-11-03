@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://frulx53jwnpn"]
+[gd_scene load_steps=9 format=3 uid="uid://frulx53jwnpn"]
 
 [ext_resource type="Script" uid="uid://colsbfijmkddy" path="res://scripts/Game.gd" id="1_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://cakgslkcjmcvi" path="res://scenes/Fighter.tscn" id="2_78awf"]
@@ -9,6 +9,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aug50"]
 size = Vector2(2057, 100)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aug50"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_cpr0p")
@@ -64,6 +66,9 @@ player_number = 2
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player2"]
 sprite_frames = ExtResource("3_aug50")
 animation = &"run"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player2"]
+shape = SubResource("CapsuleShape2D_aug50")
 
 [node name="UI" parent="." instance=ExtResource("3_s0nni")]
 

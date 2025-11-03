@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762113097
+::res://::1762148793
 icon.svg::CompressedTexture2D::8072991063756383541::1760636592::1761023782::1::::<><><>0<>0<>87e52b1d21e2961cd962aebf234a6b12<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1761595856::0::1::::<><><>0<>0<><>::
 ::res://assets/::1761845200
@@ -21,8 +21,7 @@ Idle.png::CompressedTexture2D::5881031482033283624::1761672081::1761672081::1:::
 Jump.png::CompressedTexture2D::4420888889634129761::1761672081::1761672081::1::::<><><>0<>0<>f78d68a147f6a436c9e912c1f6ea3822<>res://.godot/imported/Jump.png-f393e605cee0f73bbf91598ce4c89035.ctex::
 Run.png::CompressedTexture2D::1568792816854389198::1761672081::1761672081::1::::<><><>0<>0<>df05e0ed9ef2831c9fed77abacf6d094<>res://.godot/imported/Run.png-b645b0f9cdafaedf6ee817195b284d2e.ctex::
 Walk.png::CompressedTexture2D::8122451970860953265::1761672081::1761672081::1::::<><><>0<>0<>d5744e43e10aab45cc10475b58c9898d<>res://.godot/imported/Walk.png-f8c3f02c57a628d6cd53452fd830ddb4.ctex::
-::res://assets/sprites/Lightning Mage/::1762112506
-actions.tres::SpriteFrames::2458231742380141935::1762112506::0::1::::<><><>0<>0<><>::uid://6v6vqva116lg::::res://assets/sprites/Lightning Mage/Idle.png<>uid://d2hp77okt1s85::::res://assets/sprites/Lightning Mage/Run.png
+::res://assets/sprites/Lightning Mage/::1762113222
 Attack_1.png::CompressedTexture2D::509302888330841019::1761672081::1761672081::1::::<><><>0<>0<>caa5e3fe487dcab8cee988512efad901<>res://.godot/imported/Attack_1.png-fe3256c76aeee8af2249b9f5f6ed2d4f.ctex::
 Attack_2.png::CompressedTexture2D::1547490309959845014::1761672081::1761672081::1::::<><><>0<>0<>f7eef6519f42a226198a21aed690227e<>res://.godot/imported/Attack_2.png-cad3ae1860af6fd4a7f5427f18a30a60.ctex::
 Charge.png::CompressedTexture2D::3776771628952712702::1761672081::1761672081::1::::<><><>0<>0<>368faaf3d10772e28421e2e03a73b772<>res://.godot/imported/Charge.png-5ae665b1be1c311de7a107b4ab2adc4e.ctex::
@@ -30,6 +29,7 @@ Dead.png::CompressedTexture2D::7177789138821878321::1761672081::1761672081::1:::
 Hurt.png::CompressedTexture2D::4895298260658498512::1761672081::1761672081::1::::<><><>0<>0<>7fa77594d29880069282551a138e0449<>res://.godot/imported/Hurt.png-c787c56dedbfdde48890ac3c4221dd89.ctex::
 Idle.png::CompressedTexture2D::2221126686912320296::1761672081::1761672081::1::::<><><>0<>0<>1408781ce49858b6171c477ad823feaf<>res://.godot/imported/Idle.png-1ade760ae8eecaad64f05b8693e449ed.ctex::
 Jump.png::CompressedTexture2D::8843569298235343950::1761672081::1761672081::1::::<><><>0<>0<>732459caefeefd10b60f659c498a4c5d<>res://.godot/imported/Jump.png-60474bec80aa74923d71d15b8adc8cd2.ctex::
+lightningmage.tres::SpriteFrames::2458231742380141935::1762112506::0::1::::<><><>0<>0<><>::uid://6v6vqva116lg::::res://assets/sprites/Lightning Mage/Idle.png<>uid://d2hp77okt1s85::::res://assets/sprites/Lightning Mage/Run.png
 Light_ball.png::CompressedTexture2D::6540956467818430167::1761672081::1761672081::1::::<><><>0<>0<>f6a9651b42242fc1c62cbca3d2cbee37<>res://.godot/imported/Light_ball.png-f104cb9504f7946fd8d93f7abc19867e.ctex::
 Light_charge.png::CompressedTexture2D::7395269013628049271::1761672081::1761672081::1::::<><><>0<>0<>26a08244fc27ef77a9a6bf6fabc20a61<>res://.godot/imported/Light_charge.png-41a0dd2a17e9df0d5a3ce9106b6196be.ctex::
 Run.png::CompressedTexture2D::9069781076736304520::1761672081::1761672081::1::::<><><>0<>0<>f9e091b468acf96629aa47cf4f05e941<>res://.godot/imported/Run.png-e902fe85c751a05eca2899d9f45285e7.ctex::
@@ -47,16 +47,16 @@ Magic_arrow.png::CompressedTexture2D::115561923236993489::1761672081::1761672081
 Magic_sphere.png::CompressedTexture2D::5618941036742156584::1761672081::1761672081::1::::<><><>0<>0<>6e2f642e9cd866b82f3d6f5bb799998c<>res://.godot/imported/Magic_sphere.png-c9c5f15248019bac479e4b2c0e3570e7.ctex::
 Run.png::CompressedTexture2D::677451980186358026::1761672081::1761672081::1::::<><><>0<>0<>65c5e9e7ded4331ae73ebb5a9265964a<>res://.godot/imported/Run.png-e60fa1c27e3f6b73ea898adf580f8094.ctex::
 Walk.png::CompressedTexture2D::443061654949696523::1761672081::1761672081::1::::<><><>0<>0<>291b9064c1c6efadbb475cb16847bd38<>res://.godot/imported/Walk.png-761709e33081ac0ea27365b17437fbbc.ctex::
-::res://scenes/::1762113165
+::res://scenes/::1762113912
 ControlsMenu.tscn::PackedScene::2968680887357990990::1761673400::0::1::::<><><>0<>0<><>::uid://drix6v6boxhmj::::res://scripts/ControlsMenu.gd
-Fighter.tscn::PackedScene::4793882184481955082::1762112788::0::1::::<><><>0<>0<><>::uid://c1nc8e4dis5cg::::res://scripts/Fighter.gd
+Fighter.tscn::PackedScene::4793882184481955082::1762113622::0::1::::<><><>0<>0<><>::uid://c1nc8e4dis5cg::::res://scripts/Fighter.gd
 Fireball.tscn::PackedScene::723900552457926717::1761946912::0::1::::<><><>0<>0<><>::uid://blbbye81wsijd::::res://scripts/Fireball.gd<>uid://dkbecphjyap4q::::res://assets/sprites/Fire Wizard/Charge.png
-Game.tscn::PackedScene::387273879263746175::1762113222::0::1::::<><><>0<>0<><>::uid://colsbfijmkddy::::res://scripts/Game.gd<>uid://cakgslkcjmcvi::::res://scenes/Fighter.tscn<>uid://bba1ynukv8hjj::::res://assets/sprites/Lightning Mage/actions.tres<>uid://du0otkt2d26pe::::res://assets/sprites/Fire Wizard/firewizard.tres<>uid://cdvynxm887iba::::res://scenes/UI.tscn<>uid://cmtiswm5xrqvk::::res://assets/background/game_background_1.png
+Game.tscn::PackedScene::387273879263746175::1762113912::0::1::::<><><>0<>0<><>::uid://colsbfijmkddy::::res://scripts/Game.gd<>uid://cakgslkcjmcvi::::res://scenes/Fighter.tscn<>uid://bba1ynukv8hjj::::res://assets/sprites/Lightning Mage/lightningmage.tres<>uid://du0otkt2d26pe::::res://assets/sprites/Fire Wizard/firewizard.tres<>uid://cdvynxm887iba::::res://scenes/UI.tscn<>uid://cmtiswm5xrqvk::::res://assets/background/game_background_1.png
 MainMenu.tscn::PackedScene::501459016255082705::1761845200::0::1::::<><><>0<>0<><>::uid://bjj4x7cd0uuue::::res://scripts/MainMenu.gd<>uid://dgtyklnc46ut4::::res://assets/background/game_background_3.1.png
 UI.tscn::PackedScene::5028241482402154738::1761595856::0::1::::<><><>0<>0<><>::uid://bliyx3wtom1fe::::res://scripts/UI.gd
-::res://scripts/::1762113031
+::res://scripts/::1762113238
 ControlsMenu.gd::GDScript::8370440416347358901::1761670993::0::1::::<>Control<><>0<>0<><>::
-Fighter.gd::GDScript::6624768833002683506::1762113031::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Fighter.gd::GDScript::6624768833002683506::1762113238::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Fireball.gd::GDScript::3160666179795384773::1761946912::0::1::::<>Area2D<><>0<>0<><>::
 Game.gd::GDScript::5779288300677551802::1761673737::0::1::::<>Node2D<><>0<>0<><>::
 GameManager.gd::GDScript::6486441129717249176::1761845200::0::1::::<>Node<><>0<>0<><>::
