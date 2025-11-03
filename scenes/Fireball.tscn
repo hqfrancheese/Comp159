@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkbecphjyap4q" path="res://assets/sprites/Fire Wizard/Charge.png" id="2_6se3a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6se3a"]
-radius = 10.049875
+radius = 27.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2map7"]
 atlas = ExtResource("2_6se3a")

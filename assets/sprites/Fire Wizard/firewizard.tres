@@ -1,7 +1,36 @@
-[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://du0otkt2d26pe"]
+[gd_resource type="SpriteFrames" load_steps=26 format=3 uid="uid://du0otkt2d26pe"]
 
+[ext_resource type="Texture2D" uid="uid://chlyhly3hshbl" path="res://assets/sprites/Fire Wizard/Fireball.png" id="1_5i3d6"]
 [ext_resource type="Texture2D" uid="uid://cp12y2buvpi1m" path="res://assets/sprites/Fire Wizard/Idle.png" id="1_c8fue"]
 [ext_resource type="Texture2D" uid="uid://wl612q2xxjmk" path="res://assets/sprites/Fire Wizard/Run.png" id="2_kvomu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ud6w"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lcul"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01oy5"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at4fk"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycl26"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa0hx"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvfu8"]
+atlas = ExtResource("1_5i3d6")
+region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ehgv8"]
 atlas = ExtResource("1_c8fue")
@@ -68,6 +97,32 @@ animations = [{
 "frames": [],
 "loop": true,
 "name": &"block",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ud6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lcul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01oy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at4fk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycl26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa0hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvfu8")
+}],
+"loop": true,
+"name": &"fireball_charge",
 "speed": 5.0
 }, {
 "frames": [{

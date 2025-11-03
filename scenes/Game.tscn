@@ -55,8 +55,9 @@ disable_mode = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player1"]
 sprite_frames = ExtResource("3_kiw3p")
-animation = &"idle"
-frame_progress = 0.7519636
+animation = &"fireball_charge"
+frame = 1
+frame_progress = 0.14837939
 
 [node name="Player2" parent="." instance=ExtResource("2_78awf")]
 editor_description = "2"
@@ -64,6 +65,7 @@ position = Vector2(800, 400)
 player_number = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player2"]
+visible = false
 sprite_frames = ExtResource("3_aug50")
 animation = &"run"
 

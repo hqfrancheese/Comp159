@@ -204,9 +204,9 @@ func take_damage(amount: float):
 func set_opponent(new_opponent: CharacterBody2D):
 	opponent = new_opponent
 
-func _input(event):
-	if event.is_action_pressed("h"):
-		is_blocking = true
-		anim.play("h")
-	elif event.is_action_released("h"):
-		is_blocking = false
+# func _input(event):
+	#if event.is_action_pressed("h"):
+		#is_blocking = true
+		#anim.play("h")
+	#elif event.is_action_released("h"):
+		#is_blocking = false
