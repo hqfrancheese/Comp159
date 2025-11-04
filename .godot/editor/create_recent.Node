@@ -1,10 +1,10 @@
+Button
 CollisionShape2D
 AnimatedSprite2D
 Sprite2D
 ParallaxLayer
 ParallaxBackground
 ColorRect
-Button
 Control
 Label
 GridContainer
