@@ -8,7 +8,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -700.0
 const MELEE_RANGE = 80.0
 const FIREBALL_COOLDOWN = 1.0
-const MELEE_COOLDOWN = 0.5
+const MELEE_COOLDOWN = 1.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health: float = 100.0
@@ -161,7 +161,7 @@ func _cpu_behavior(_delta):
 	
 	var can_change_direction = is_on_floor()
 	var distance_error = distance - ideal_distance
-	var move_intensity = 0.0
+	var move_intensity = -0.5
 	
 	if can_change_direction:
 		if abs(distance_error) > 30:
