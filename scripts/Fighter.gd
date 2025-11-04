@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -700.0
 const MELEE_RANGE = 80.0
 const FIREBALL_COOLDOWN = 1.0
 const MELEE_COOLDOWN = 0.5
@@ -19,6 +19,7 @@ var melee_timer: float = 0.0
 var is_attacking: bool = false
 var opponent: CharacterBody2D = null
 var facing: int = 1
+var current_animation: String = "idle"
 
 # Player controls mapping
 var controls = {
@@ -38,13 +39,10 @@ func _ready():
 		controls = GameManager.player1_controls
 		sprite.color = Color.BLUE
 		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Fire Wizard/firewizard.tres") 
-
 	else:
 		controls = GameManager.player2_controls
 		sprite.color = Color.RED
 		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Lightning Mage/lightningmage.tres")
-
-
 
 func _physics_process(delta):
 	fireball_timer = max(0, fireball_timer - delta)
@@ -59,15 +57,8 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	# Face direction
-	$AnimatedSprite2D.flip_h = facing < 0
-	if is_blocking:
-		$AnimatedSprite2D.play("block")
-	elif velocity.x != 0:
-		facing = sign(velocity.x)
-		$AnimatedSprite2D.play("run")
-	else:
-		$AnimatedSprite2D.play("idle")
+	# Update animation smoothly
+	_update_animation()
 	
 	# Update blocking visual
 	if is_blocking:
@@ -76,6 +67,40 @@ func _physics_process(delta):
 		sprite.color.a = 1.0
 	
 	move_and_slide()
+
+func _update_animation():
+	var new_animation = "idle"
+	
+	# Priority system for animations
+	if is_blocking:
+		new_animation = "block"
+	elif not is_on_floor():
+		# In air - don't change animation, keep current one smooth
+		if current_animation == "idle" or current_animation == "run":
+			new_animation = current_animation  # Keep whatever was playing
+		else:
+			new_animation = "idle"
+	elif abs(velocity.x) > 10:  # Only play run if actually moving
+		new_animation = "run"
+	else:
+		new_animation = "idle"
+	
+	# Only change animation if it's different
+	if new_animation != current_animation:
+		current_animation = new_animation
+		$AnimatedSprite2D.play(current_animation)
+	
+	# Update facing direction
+	if not is_cpu:
+		# Player: instant direction change
+		if velocity.x != 0:
+			facing = sign(velocity.x)
+	else:
+		# CPU: only change direction when on ground and moving significantly
+		if is_on_floor() and abs(velocity.x) > 50:
+			facing = sign(velocity.x)
+	
+	$AnimatedSprite2D.flip_h = facing < 0
 
 func _player_input(_delta):
 	# Jump
@@ -111,27 +136,92 @@ func _cpu_behavior(_delta):
 	
 	var distance = global_position.distance_to(opponent.global_position)
 	var direction_to_opponent = sign(opponent.global_position.x - global_position.x)
+	var health_ratio = health / 100.0
+	var opponent_health_ratio = opponent.health / 100.0
 	
-	# Movement logic
-	if distance > MELEE_RANGE * 1.5:
-		# Move towards opponent
-		velocity.x = direction_to_opponent * SPEED
-	elif distance < MELEE_RANGE * 0.8:
-		# Move away slightly
-		velocity.x = -direction_to_opponent * SPEED * 0.5
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	# AI difficulty settings
+	var aggression = 0.7  # Higher = more aggressive (0.0 to 1.0)
+	var ideal_distance = MELEE_RANGE * 1.8  # Preferred fighting distance
 	
-	# Attack logic
-	if distance <= MELEE_RANGE and melee_timer <= 0:
-		_melee_attack()
-	elif distance > MELEE_RANGE and distance < 400 and fireball_timer <= 0:
-		_shoot_fireball()
+	# Adjust aggression based on health
+	if health_ratio < 0.3:
+		aggression = 0.4  # Play more defensive when low health
+		ideal_distance = MELEE_RANGE * 2.5  # Keep more distance when low
+	elif opponent_health_ratio < 0.3:
+		aggression = 0.9  # Go for the kill
+		ideal_distance = MELEE_RANGE * 1.2  # Get closer for the finish
 	
-	facing = sign(direction_to_opponent)
+	# Jump occasionally (dodge fireballs, add variety)
+	if is_on_floor() and randf() < 0.08:
+		velocity.y = JUMP_VELOCITY
 	
-	# Random blocking
-	is_blocking = randf() < 0.1
+	# Don't change movement direction while in air (reduces flickering)
+	var can_change_direction = is_on_floor()
+	
+	# Tactical spacing - maintain ideal distance
+	var distance_error = distance - ideal_distance
+	var move_intensity = 0.0
+	
+	if can_change_direction:  # Only adjust movement on ground
+		if abs(distance_error) > 30:  # Only move if significantly off ideal distance
+			if distance_error > 0:
+				# Too far - approach
+				move_intensity = 0.6
+			else:
+				# Too close - back off
+				move_intensity = -0.4
+		else:
+			# At ideal range - strafe/circle
+			if randf() < 0.3:
+				move_intensity = randf_range(-0.3, 0.3)  # Random strafing
+			else:
+				move_intensity = 0  # Hold position
+		
+		# Apply movement with some randomness
+		velocity.x = direction_to_opponent * move_intensity * SPEED
+		
+		# Add pauses/hesitation for realism (not constant movement)
+		if randf() < 0.15:
+			velocity.x = 0  # Stand still briefly
+	# else: keep current velocity.x when in air (no flickering)
+	
+	# Smart blocking decisions
+	is_blocking = false
+	
+	# Block when opponent attacks
+	if opponent.is_attacking and distance <= MELEE_RANGE * 1.5:
+		is_blocking = randf() < 0.7
+	# Block when too close and defensive
+	elif distance < MELEE_RANGE * 0.8 and health_ratio < 0.5:
+		is_blocking = randf() < 0.4
+	# Occasional random block (feint defense)
+	elif randf() < 0.05:
+		is_blocking = true
+	
+	# Attack decision making with better timing
+	var should_attack = false
+	
+	# Only consider attacking at good ranges
+	if distance > MELEE_RANGE * 0.7 and distance < MELEE_RANGE * 2.5:
+		should_attack = randf() < (aggression * 0.3)  # Less spam, more tactical
+	
+	if should_attack and not is_blocking:
+		# Prefer different attacks at different ranges
+		if distance <= MELEE_RANGE * 1.2 and melee_timer <= 0:
+			# Close range melee
+			if randf() < 0.6:  # 60% chance
+				_melee_attack()
+		elif distance > MELEE_RANGE * 1.3 and distance < 380 and fireball_timer <= 0:
+			# Medium range fireball
+			if randf() < 0.5:  # 50% chance
+				_shoot_fireball()
+	
+	# Don't block while attacking
+	if melee_timer > 0 or fireball_timer > 0.5:
+		is_blocking = false
+	
+	# Always face opponent
+	facing = direction_to_opponent
 
 func _melee_attack():
 	melee_timer = MELEE_COOLDOWN
@@ -147,7 +237,6 @@ func _melee_attack():
 	add_child(attack_area)
 	
 	# Position hitbox in front of player
-	facing = self.facing
 	attack_area.position.x = MELEE_RANGE / 2 * facing
 	
 	# Check for hit
@@ -203,7 +292,7 @@ func take_damage(amount: float):
 
 func set_opponent(new_opponent: CharacterBody2D):
 	opponent = new_opponent
-
+	
 # func _input(event):
 	#if event.is_action_pressed("h"):
 		#is_blocking = true
