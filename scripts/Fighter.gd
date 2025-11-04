@@ -31,7 +31,7 @@ var controls = {
 }
 
 @onready var sprite = $ColorRect
-@onready var fireball_scene = preload("res://scenes/Fireball.tscn")
+@onready var fireball_scene = null
 
 func _ready():
 	# Assign control scheme based on player number
@@ -39,10 +39,12 @@ func _ready():
 		controls = GameManager.player1_controls.duplicate()
 		sprite.color = Color.BLUE
 		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Fire Wizard/firewizard.tres")
+		fireball_scene = preload("res://scenes/Fireball.tscn")
 	else:
 		controls = GameManager.player2_controls.duplicate()
 		sprite.color = Color.RED
 		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Lightning Mage/lightningmage.tres")
+		fireball_scene = preload("res://scenes/Lightning.tscn")
 
 func _physics_process(delta):
 	fireball_timer = max(0, fireball_timer - delta)

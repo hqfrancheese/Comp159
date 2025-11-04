@@ -1,4 +1,4 @@
-# Fireball.gd
+# Lightning.gd
 extends Area2D
 
 const SPEED = 400.0
