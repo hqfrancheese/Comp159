@@ -5,7 +5,7 @@ enum GameMode { PVP, PVCPU }
 var game_mode = GameMode.PVP
 
 # Default control bindings
-var player1_controls = {
+var default_p1_controls = {
 	"left": "a",
 	"right": "d",
 	"jump": "w",
@@ -14,7 +14,7 @@ var player1_controls = {
 	"block": "h"
 }
 
-var player2_controls = {
+var default_p2_controls = {
 	"left": "left",
 	"right": "right",
 	"jump": "up",
@@ -23,27 +23,46 @@ var player2_controls = {
 	"block": "j"
 }
 
+var player1_controls = {}
+var player2_controls = {}
+
 var player1_health = 100
 var player2_health = 100
 
-func reset_health():
-	player1_health = 100.0
-	player2_health = 100.0
+const SAVE_PATH = "user://controls.json"
 
-# (Optional) Save/load functions
+func _ready():
+	load_controls()
+
+func reset_health():
+	player1_health = 100
+	player2_health = 100
+
 func save_controls():
-	var data = {
-		"p1": player1_controls,
-		"p2": player2_controls
-	}
-	var file = FileAccess.open("user://controls.json", FileAccess.WRITE)
-	file.store_string(JSON.stringify(data))
-	file.close()
+	var data = {"p1": player1_controls, "p2": player2_controls}
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	if file:
+		file.store_string(JSON.stringify(data, "\t"))
+		file.close()
+		print("Controls saved:", data)
+	else:
+		push_error("Failed to open file for saving.")
 
 func load_controls():
-	if FileAccess.file_exists("user://controls.json"):
-		var file = FileAccess.open("user://controls.json", FileAccess.READ)
-		var data = JSON.parse_string(file.get_as_text())
-		player1_controls = data["p1"]
-		player2_controls = data["p2"]
+	if FileAccess.file_exists(SAVE_PATH):
+		var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+		var result = JSON.parse_string(file.get_as_text())
 		file.close()
+		if typeof(result) == TYPE_DICTIONARY:
+			player1_controls = result.get("p1", default_p1_controls)
+			player2_controls = result.get("p2", default_p2_controls)
+			print("Controls loaded:", result)
+			return
+	print("No valid save found. Using defaults.")
+	player1_controls = default_p1_controls.duplicate()
+	player2_controls = default_p2_controls.duplicate()
+
+func reset_controls_to_default():
+	player1_controls = default_p1_controls.duplicate()
+	player2_controls = default_p2_controls.duplicate()
+	save_controls()
