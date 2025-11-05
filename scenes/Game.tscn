@@ -65,9 +65,9 @@ position = Vector2(800, 400)
 player_number = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player2"]
-visible = false
 sprite_frames = ExtResource("3_aug50")
-animation = &"run"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player2"]
 shape = SubResource("CapsuleShape2D_aug50")

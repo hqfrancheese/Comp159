@@ -45,7 +45,10 @@ func _ready():
 		sprite.color = Color.RED
 		$AnimatedSprite2D.sprite_frames = preload("res://assets/sprites/Lightning Mage/lightningmage.tres")
 		fireball_scene = preload("res://scenes/Lightning.tscn")
-
+		
+	current_animation = "idle"
+	$AnimatedSprite2D.play("idle")
+	
 func _physics_process(delta):
 	fireball_timer = max(0, fireball_timer - delta)
 	melee_timer = max(0, melee_timer - delta)
