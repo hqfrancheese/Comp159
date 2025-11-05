@@ -54,6 +54,7 @@ position = Vector2(200, 400)
 disable_mode = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player1"]
+visible = false
 sprite_frames = ExtResource("3_kiw3p")
 animation = &"fireball_charge"
 frame = 1
@@ -65,6 +66,7 @@ position = Vector2(800, 400)
 player_number = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player2"]
+visible = false
 sprite_frames = ExtResource("3_aug50")
 animation = &"idle"
 autoplay = "idle"
