@@ -27,7 +27,7 @@ columns = 2
 layout_mode = 2
 text = "Left:"
 
-[node name="Label2" type="Button" parent="VBoxContainer/Player1Grid"]
+[node name="Label2" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
 text = "A"
 
@@ -35,7 +35,7 @@ text = "A"
 layout_mode = 2
 text = "Right:"
 
-[node name="Label4" type="Button" parent="VBoxContainer/Player1Grid"]
+[node name="Label4" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
 text = "D"
 
@@ -43,7 +43,7 @@ text = "D"
 layout_mode = 2
 text = "Jump:"
 
-[node name="Label6" type="Button" parent="VBoxContainer/Player1Grid"]
+[node name="Label6" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
 text = "W"
 
@@ -51,7 +51,7 @@ text = "W"
 layout_mode = 2
 text = "Melee:"
 
-[node name="Label8" type="Button" parent="VBoxContainer/Player1Grid"]
+[node name="Label8" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
 text = "F"
 
@@ -59,7 +59,7 @@ text = "F"
 layout_mode = 2
 text = "Fireball:"
 
-[node name="Label10" type="Button" parent="VBoxContainer/Player1Grid"]
+[node name="Label10" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
 text = "G"
 
@@ -67,7 +67,7 @@ text = "G"
 layout_mode = 2
 text = "Block:"
 
-[node name="Label12" type="Button" parent="VBoxContainer/Player1Grid"]
+[node name="Label12" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
 text = "H"
 
@@ -82,7 +82,7 @@ columns = 2
 layout_mode = 2
 text = "Left:"
 
-[node name="Label2" type="Button" parent="VBoxContainer/Player2Grid"]
+[node name="Label2" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
 text = "←"
 
@@ -90,7 +90,7 @@ text = "←"
 layout_mode = 2
 text = "Right:"
 
-[node name="Label4" type="Button" parent="VBoxContainer/Player2Grid"]
+[node name="Label4" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
 text = "→"
 
@@ -98,7 +98,7 @@ text = "→"
 layout_mode = 2
 text = "Jump:"
 
-[node name="Label6" type="Button" parent="VBoxContainer/Player2Grid"]
+[node name="Label6" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
 text = "↑"
 
@@ -106,7 +106,7 @@ text = "↑"
 layout_mode = 2
 text = "Melee:"
 
-[node name="Label8" type="Button" parent="VBoxContainer/Player2Grid"]
+[node name="Label8" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
 text = "L"
 
@@ -114,7 +114,7 @@ text = "L"
 layout_mode = 2
 text = "Fireball:"
 
-[node name="Label10" type="Button" parent="VBoxContainer/Player2Grid"]
+[node name="Label10" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
 text = "K"
 
@@ -122,11 +122,12 @@ text = "K"
 layout_mode = 2
 text = "Block:"
 
-[node name="Label12" type="Button" parent="VBoxContainer/Player2Grid"]
+[node name="Label12" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
 text = "J"
 
 [node name="SaveButton" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Save"
 
@@ -135,10 +136,12 @@ layout_mode = 2
 text = "Back"
 
 [node name="ResetP1Button" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Player 1 Reset"
 
 [node name="ResetP2Button" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Player 2 Reset
 "

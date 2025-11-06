@@ -1,3 +1,4 @@
+Label
 Button
 CollisionShape2D
 AnimatedSprite2D
@@ -6,7 +7,6 @@ ParallaxLayer
 ParallaxBackground
 ColorRect
 Control
-Label
 GridContainer
 VBoxContainer
 StaticBody2D
