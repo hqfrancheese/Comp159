@@ -9,8 +9,11 @@ script = ExtResource("1_nwgxb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 824.0
+offset_top = -8.0
+offset_right = 906.0
+offset_bottom = 428.0
+scale = Vector2(2.5, 2.5)
 
 [node name="TitleLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -18,6 +21,8 @@ text = "Controls"
 
 [node name="Player1Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "Player 1"
+horizontal_alignment = 1
 
 [node name="Player1Grid" type="GridContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -53,7 +58,7 @@ text = "Melee:"
 
 [node name="Label8" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
-text = "F"
+text = "E"
 
 [node name="Label9" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
@@ -61,7 +66,7 @@ text = "Fireball:"
 
 [node name="Label10" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
-text = "G"
+text = "Q"
 
 [node name="Label11" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
@@ -69,10 +74,12 @@ text = "Block:"
 
 [node name="Label12" type="Label" parent="VBoxContainer/Player1Grid"]
 layout_mode = 2
-text = "H"
+text = "F"
 
 [node name="Player2Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "Player 2"
+horizontal_alignment = 1
 
 [node name="Player2Grid" type="GridContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -84,7 +91,7 @@ text = "Left:"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
-text = "←"
+text = "J"
 
 [node name="Label3" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
@@ -92,7 +99,7 @@ text = "Right:"
 
 [node name="Label4" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
-text = "→"
+text = "L"
 
 [node name="Label5" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
@@ -100,7 +107,7 @@ text = "Jump:"
 
 [node name="Label6" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
-text = "↑"
+text = "I"
 
 [node name="Label7" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
@@ -108,7 +115,7 @@ text = "Melee:"
 
 [node name="Label8" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
-text = "L"
+text = "U"
 
 [node name="Label9" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
@@ -116,7 +123,7 @@ text = "Fireball:"
 
 [node name="Label10" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
-text = "K"
+text = "O"
 
 [node name="Label11" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
@@ -124,7 +131,7 @@ text = "Block:"
 
 [node name="Label12" type="Label" parent="VBoxContainer/Player2Grid"]
 layout_mode = 2
-text = "J"
+text = "H"
 
 [node name="SaveButton" type="Button" parent="VBoxContainer"]
 visible = false

@@ -5,20 +5,14 @@ var editing_player = ""
 var action_name = ""
 
 func _ready():
-	# Connect all control buttons for Player 1 and Player 2
 	for grid in [$VBoxContainer/Player1Grid, $VBoxContainer/Player2Grid]:
 		for child in grid.get_children():
 			if child is Button:
 				child.pressed.connect(_on_control_button_pressed.bind(child))
-	
-	# Connect Save / Back / Reset buttons
 	$VBoxContainer/SaveButton.pressed.connect(_on_save_pressed)
 	$VBoxContainer/BackButton.pressed.connect(_on_back_pressed)
 	$VBoxContainer/ResetP1Button.pressed.connect(_on_reset_p1_pressed)
 	$VBoxContainer/ResetP2Button.pressed.connect(_on_reset_p2_pressed)
-	
-	# Load saved controls into UI
-	GameManager.load_controls()
 	_load_controls()
 
 
@@ -61,8 +55,7 @@ func _update_player_controls(player: String, action: String, key: String):
 
 
 func _on_save_pressed():
-	GameManager.save_controls()
-	print("Saved controls successfully.")
+	print("Controls updated for this session (not saved).")
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
 
 
@@ -73,12 +66,10 @@ func _on_back_pressed():
 func _on_reset_p1_pressed():
 	GameManager.player1_controls = GameManager.default_p1_controls.duplicate()
 	_set_grid_values($VBoxContainer/Player1Grid, GameManager.player1_controls)
-	GameManager.save_controls()
-	print("Player 1 controls reset to default.")
+	print("Player 1 controls reset to default (session only).")
 
 
 func _on_reset_p2_pressed():
 	GameManager.player2_controls = GameManager.default_p2_controls.duplicate()
 	_set_grid_values($VBoxContainer/Player2Grid, GameManager.player2_controls)
-	GameManager.save_controls()
-	print("Player 2 controls reset to default.")
+	print("Player 2 controls reset to default (session only).")

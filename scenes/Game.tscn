@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://frulx53jwnpn"]
+[gd_scene load_steps=11 format=3 uid="uid://frulx53jwnpn"]
 
 [ext_resource type="Script" uid="uid://colsbfijmkddy" path="res://scripts/Game.gd" id="1_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://cakgslkcjmcvi" path="res://scenes/Fighter.tscn" id="2_78awf"]
@@ -9,6 +9,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aug50"]
 size = Vector2(2057, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kiw3p"]
+size = Vector2(526.91516, 32.912964)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_400sg"]
+size = Vector2(248.66971, 37.19223)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aug50"]
 
@@ -32,6 +38,90 @@ color = Color(0, 0.48530394, 0.19317397, 1)
 position = Vector2(982, 549.5)
 shape = SubResource("RectangleShape2D_aug50")
 
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(0, 900)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1"]
+offset_left = 296.0
+offset_top = -149.0
+offset_right = 820.0
+offset_bottom = -119.0
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+position = Vector2(560.125, -133.125)
+shape = SubResource("RectangleShape2D_kiw3p")
+one_way_collision = true
+one_way_collision_margin = 17.9
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(0, 900)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2"]
+offset_left = 1142.0
+offset_top = -157.0
+offset_right = 1666.0
+offset_bottom = -127.0
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(1400, -141)
+shape = SubResource("RectangleShape2D_kiw3p")
+one_way_collision = true
+one_way_collision_margin = 17.9
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(13, 774)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3"]
+offset_left = 701.0
+offset_top = -331.0
+offset_right = 1225.0
+offset_bottom = -301.0
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(962, -315)
+shape = SubResource("RectangleShape2D_kiw3p")
+one_way_collision = true
+one_way_collision_margin = 17.9
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(-693, 771)
+scale = Vector2(1.014344, 1.012745)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4"]
+offset_left = 2268.461
+offset_top = -227.106
+offset_right = 2517.4065
+offset_bottom = -193.53389
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+position = Vector2(2393.666, -209.332)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_400sg")
+one_way_collision = true
+one_way_collision_margin = 17.9
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(-693, 771)
+scale = Vector2(1.014344, 1.012745)
+
+[node name="ColorRect" type="ColorRect" parent="Platform5"]
+offset_left = 812.3477
+offset_top = -227.10556
+offset_right = 1061.2932
+offset_bottom = -193.53345
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+position = Vector2(931.6366, -209.33206)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_400sg")
+one_way_collision = true
+one_way_collision_margin = 17.9
+
 [node name="wall" type="StaticBody2D" parent="."]
 position = Vector2(0, 500)
 
@@ -50,7 +140,7 @@ shape = SubResource("RectangleShape2D_aug50")
 
 [node name="Player1" parent="." instance=ExtResource("2_78awf")]
 editor_description = "1"
-position = Vector2(200, 400)
+position = Vector2(90, 991)
 disable_mode = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player1"]
@@ -62,7 +152,7 @@ frame_progress = 0.14837939
 
 [node name="Player2" parent="." instance=ExtResource("2_78awf")]
 editor_description = "2"
-position = Vector2(800, 400)
+position = Vector2(1779, 991)
 player_number = 2
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player2"]
@@ -82,6 +172,7 @@ shape = SubResource("CapsuleShape2D_aug50")
 position = Vector2(316, 1029)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
 position = Vector2(635.00006, -496)
 scale = Vector2(1.0130208, 0.99768525)
 texture = ExtResource("4_78awf")

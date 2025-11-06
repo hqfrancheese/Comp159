@@ -20,8 +20,8 @@ func _ready():
 	player2.health = 100.0
 
 	# Reset positions
-	player1.global_position = Vector2(400, 500)
-	player2.global_position = Vector2(800, 500)
+	player1.global_position = Vector2(90, 991)
+	player2.global_position = Vector2(1779, 991)
 
 
 # This applies the current session controls without touching the defaults
