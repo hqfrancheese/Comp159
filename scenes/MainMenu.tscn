@@ -32,16 +32,16 @@ theme_override_constants/separation = 20
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "GodotGame"
+text = "Duel Magic"
 horizontal_alignment = 1
-
-[node name="PvPButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Player vs Player"
 
 [node name="PvCPUButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Player vs CPU"
+
+[node name="PvPButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Player vs Player"
 
 [node name="ControlsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -56,6 +56,6 @@ text = "Quit"
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(579, 330.00003)
-scale = Vector2(0.6483724, 0.6288194)
+position = Vector2(1056.7813, 645.21875)
+scale = Vector2(1.1460612, 1.2125577)
 texture = ExtResource("2_0ykhv")

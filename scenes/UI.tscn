@@ -75,9 +75,8 @@ text = "Restart"
 
 [node name="MainMenuButton" type="Button" parent="."]
 process_mode = 3
-visible = false
-offset_left = 532.0
-offset_top = 433.0
-offset_right = 628.0
-offset_bottom = 464.0
+offset_left = 917.0
+offset_top = 745.0
+offset_right = 1013.0
+offset_bottom = 776.0
 text = "Main Menu"

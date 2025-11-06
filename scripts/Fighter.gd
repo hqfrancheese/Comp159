@@ -235,7 +235,7 @@ func _melee_attack():
 	var flash = ColorRect.new()
 	flash.size = Vector2(MELEE_RANGE, 50)
 	flash.color = Color(1, 1, 0, 0.5)
-	flash.position = Vector2(MELEE_RANGE / 2 * facing - MELEE_RANGE / 2, -25)
+	flash.position = Vector2(MELEE_RANGE / 2 * facing - MELEE_RANGE / 2, -55)
 	add_child(flash)
 	
 	await get_tree().create_timer(0.1).timeout
