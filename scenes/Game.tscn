@@ -172,7 +172,6 @@ shape = SubResource("CapsuleShape2D_aug50")
 position = Vector2(316, 1029)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-visible = false
 position = Vector2(635.00006, -496)
 scale = Vector2(1.0130208, 0.99768525)
 texture = ExtResource("4_78awf")
